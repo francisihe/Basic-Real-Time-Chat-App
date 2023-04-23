@@ -1,14 +1,15 @@
+import { UserAuth } from "../contexts/AuthContext";
 
 
 const Message = ({ ...message }) => {
-
+    const { currentUser } = UserAuth();
 
     return (
         <div>
             <div className="chat chat-start">
                 <div className="chat-image avatar">
                     <div className="w-10 rounded-full">
-                        <img src="" />
+                        <img src={currentUser.photoURL} />
                     </div>
                 </div>
                 <div className="chat-header">
