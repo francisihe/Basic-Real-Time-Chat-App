@@ -27,6 +27,7 @@ export const AuthProvider = ({ children }) => {
         return unsubscribe;
     }, [])
 
+
     // Sign Out Current User
     const signOutCurrentUser = async () => {
         await signOut(auth);
@@ -45,10 +46,10 @@ export const AuthProvider = ({ children }) => {
             {!loading && children}
         </AuthContext.Provider>
     )
-    
+
 }
 AuthProvider.propTypes = {
-  children: PropTypes.any
+    children: PropTypes.any
 }
 
 export const UserAuth = () => {
